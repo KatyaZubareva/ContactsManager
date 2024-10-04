@@ -1,9 +1,12 @@
-﻿class Program
+﻿using System;
+using System.Collections.Generic;
+
+class Program
 {
     static void Main(string[] args)
     {
-        DataHandler dataHandler = new DataHandler();
-        List<Contact> contacts = new List<Contact>(); // Загрузите или создайте список контактов
+        var dataHandler = new DataHandler();
+        List<User> contacts = new List<User>(); // Load or create a list of contacts
 
         Console.WriteLine("Выберите вариант сохранения/загрузки данных:");
         Console.WriteLine("1. Сохранить в JSON");
@@ -14,7 +17,7 @@
         Console.WriteLine("6. Загрузить из SQLite");
 
         string choice = Console.ReadLine();
-        string filePath = "contacts.json"; // Укажите путь к файлу
+        string filePath = "contacts.json"; // Specify file path for JSON and XML
         string connectionString = "Data Source=contacts.db;Version=3;";
 
         switch (choice)
@@ -42,10 +45,10 @@
                 break;
         }
 
-        // Выведите список контактов, если нужно
+        // Display the list of contacts, if needed
         foreach (var contact in contacts)
         {
-            Console.WriteLine($"{contact.Id} - {contact.Name} {contact.Surname} ({contact.Phone}, {contact.Email})");
+            Console.WriteLine($"{contact.Name} {contact.Surname} ({contact.Phone}, {contact.Email})");
         }
     }
 }
