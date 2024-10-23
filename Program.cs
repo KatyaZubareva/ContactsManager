@@ -6,7 +6,7 @@ class Program
     static void Main(string[] args)
     {
         var dataHandler = new DataHandler();
-        List<User> contacts = new List<User>(); // Load or create a list of contacts
+        List<User> contacts = new List<User>(); 
 
         Console.WriteLine("Выберите вариант сохранения/загрузки данных:");
         Console.WriteLine("1. Сохранить в JSON");
@@ -17,7 +17,7 @@ class Program
         Console.WriteLine("6. Загрузить из SQLite");
 
         string choice = Console.ReadLine();
-        string filePath = "contacts.json"; // Specify file path for JSON and XML
+        string filePath = "contacts.json"; 
         string connectionString = "Data Source=contacts.db;Version=3;";
 
         switch (choice)
@@ -45,7 +45,6 @@ class Program
                 break;
         }
 
-        // Display the list of contacts, if needed
         foreach (var contact in contacts)
         {
             Console.WriteLine($"{contact.Name} {contact.Surname} ({contact.Phone}, {contact.Email})");

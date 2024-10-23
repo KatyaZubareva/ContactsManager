@@ -4,14 +4,14 @@ using System.Xml.Serialization;
 using Newtonsoft.Json;
 
 class DataHandler {
-    // Save contacts to JSON
+    // Сохранить контакты в JSON
     public void SaveToJson(List<User> contacts, string filePath) {
         string json = JsonConvert.SerializeObject(contacts, Formatting.Indented);
         File.WriteAllText(filePath, json);
         Console.WriteLine("Контакты успешно сохранены в JSON.");
     }
 
-    // Load contacts from JSON
+    // Загрузить контакты из JSON
     public List<User> LoadFromJson(string filePath) {
         if (!File.Exists(filePath)) {
             Console.WriteLine("Файл contacts.json не найден.");
@@ -22,7 +22,7 @@ class DataHandler {
         return JsonConvert.DeserializeObject<List<User>>(json);
     }
 
-    // Save contacts to XML
+    // Сохранить контакты в XML
     public void SaveToXml(List<User> contacts, string filePath) {
         XmlSerializer serializer = new XmlSerializer(typeof(List<User>));
         using (FileStream stream = new FileStream(filePath, FileMode.Create)) {
@@ -31,7 +31,7 @@ class DataHandler {
         Console.WriteLine("Контакты успешно сохранены в XML.");
     }
 
-    // Load contacts from XML
+    // Загрузить контакты из XML
     public List<User> LoadFromXml(string filePath) {
         if (!File.Exists(filePath)) {
             Console.WriteLine("Файл contacts.xml не найден.");
@@ -44,7 +44,7 @@ class DataHandler {
         }
     }
 
-    // Save contacts to SQLite
+    // Сохранить контакты в SQLite
     public void SaveToSQLite(List<User> contacts, string connectionString) {
         using (var connection = new SQLiteConnection(connectionString)) {
             connection.Open();
@@ -62,7 +62,7 @@ class DataHandler {
         }
     }
 
-    // Load contacts from SQLite
+    // Загрузить контакты из SQLite
     public List<User> LoadFromSQLite(string connectionString) {
         List<User> contacts = new List<User>();
         using (var connection = new SQLiteConnection(connectionString)) {

@@ -1,0 +1,5 @@
+/Users/katyazubareva/Desktop/ПРОГА/C#/Lab3/obj/Debug/net6.0/Lab3.csproj.AssemblyReference.cache
+/Users/katyazubareva/Desktop/ПРОГА/C#/Lab3/obj/Debug/net6.0/Lab3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/katyazubareva/Desktop/ПРОГА/C#/Lab3/obj/Debug/net6.0/Lab3.AssemblyInfoInputs.cache
+/Users/katyazubareva/Desktop/ПРОГА/C#/Lab3/obj/Debug/net6.0/Lab3.AssemblyInfo.cs
+/Users/katyazubareva/Desktop/ПРОГА/C#/Lab3/obj/Debug/net6.0/Lab3.csproj.CoreCompileInputs.cache
